@@ -1,0 +1,128 @@
+* {
+  font-family: helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.possibility {
+}
+
+.dice {
+  float: left;
+  margin: 4px;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/dices.png');
+}
+
+.dice.face6 {
+  background-position: 0 0;
+}
+
+.dice.face5 {
+  background-position: -50px 0;
+}
+
+.dice.face4 {
+  background-position: -100px 0;
+}
+
+.dice.face3 {
+  background-position: -149px 0;
+}
+
+.dice.face2 {
+  background-position: -199px 0;
+}
+
+.dice.face1 {
+  background-position: -249px 0;
+}
+
+.dice.empty {
+  visibility: hidden;
+}
+
+.dice.selected {
+  background-image: url('../images/red_dices.png');
+}
+
+.keep {
+  visibility: hidden;
+  color: black;
+}
+
+dt, th {
+  font-weight: bold;
+}
+
+#banner {
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 5px black;  
+}
+
+h1 {
+  color: black;
+  font-family: 'Fredericka the Great', helvetica, sans-serif;
+  font-size: 40px;  
+}
+
+td, th {
+  padding: 10px;
+  width: 20%;
+  height: auto;
+}
+
+dd {
+  margin-left: 0px;
+}
+
+table {
+  border: 1px solid black;
+  table-layout: fixed;
+  width: 90%;
+  
+}
+
+#btn a{
+  height: 30px;
+  width: 60px;
+  background-color: #ba2323;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;  
+}
+
+#btn a:hover{
+  background-color: #fcb51b;
+  text-decoration: none;
+  color: black;
+}
+
+#btn #resetBtn {
+  background-color: blue;
+}
+
+body {
+  background-color: #215fc4;
+}
+
+.container {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0px 0px 5px black;
+  margin-bottom: 20px;
+  min-width: 95%;
+  
+}
+
+th {
+  background-color: #fcb51b;
+}

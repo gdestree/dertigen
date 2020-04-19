@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30'en</title>
+		<!--[if IE]>
+		<style type="text/css" media="screen">
+			body {
+				behavior: url("/css/hack/csshover3.htc");
+			}
+		</style>
+		<![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='http://fonts.googleapis.com/css?family=Zeyada' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">  
+    <script src="lib/jquery-1.7.1.min.js" type="text/javascript" ></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/dertig.css" type="text/css" rel="stylesheet" media="screen, projection" />
+  </head>
+  <body>
+    <div id="banner" class="col-xs-12">
+      <h1>30'en</h1>
+    </div>
+    <div class="container" style="height: 500px;">
+      <div class="row">
+        <div class="col-md-12 pt-3">
+          <div id="btn">
+            <a href="javascript:void(0)" id="launchBtn">Roll de stenen</a>
+          </div>
+        </div>
+        <div class="col-md-12 pt-3">
+          <p>Punten: <span id="point-total"></span></p>
+          <hr>
+          <span>Dice Roll #:</span>
+          <b><span id="launch" style="color:tomato;"></span></b>
+          <hr>
+        </div>
+        <div class="col-md-12 pt-3">
+          <div class="dice empty" id="dice1"></div>
+          <div class="dice empty" id="dice2"></div>
+          <div class="dice empty" id="dice3"></div>
+          <div class="dice empty" id="dice4"></div>
+          <div class="dice empty" id="dice5"></div>
+          <div class="dice empty" id="dice6"></div>
+        </div>
+        <div class="col-md-12 pt-3" id="btn">
+          <a href="javascript:void(0)" id="resetBtn">Reset</a>
+        </div>
+      </div>
+    </div>
+    <script src="js/dertig.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+      $(document).ready(function () 
+      {
+        $(".dice").click(function(evt) 
+        {
+          if( $(this).hasClass("selected") )
+            $(this).removeClass("selected");
+          else
+            $(this).addClass("selected");
+        });
+        
+        $("#launchBtn").click(function() 
+        {
+          Dertig.roll();
+        });
+
+        $("#resetBtn").click(function() 
+        {
+          console.log('hallo')
+          Dertig.clear(true);
+        });
+      });
+    </script>
+  </body>
+</html>
